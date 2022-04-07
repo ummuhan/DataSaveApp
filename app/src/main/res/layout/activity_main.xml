@@ -36,19 +36,22 @@
                 android:onClick="Save"
                 android:text="Kaydet"
                 android:textSize="10dp" />
+
             <Button
                 android:id="@+id/delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10dp"
-                android:text="Sil"/>
+                android:onClick="Delete"
+                android:text="Sil"
+                android:textSize="10dp" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"/>
+            android:gravity="center"
+            android:textSize="30dp"/>
 
 
 

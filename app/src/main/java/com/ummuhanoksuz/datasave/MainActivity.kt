@@ -24,11 +24,20 @@ class MainActivity : AppCompatActivity() {
 
         var name=sharedPref.getString("name","")
         if(!name.equals("")){
-            data.text=name
+            data.text="Adınız: "+name.toString().toUpperCase()
         }
     }
     fun Save(view: View){
-        data.text=textView.text.toString()
-        sharedPref.edit().putString("name",data.text.toString()).apply()
+        var myName=textView.text.toString()
+        data.text="Adınız: "+myName.toUpperCase()
+        sharedPref.edit().putString("name",myName).apply()
+    }
+    fun Delete(view:View){
+        var name=sharedPref.getString("name","")
+        if(name!=""){
+            sharedPref.edit().remove("name").apply()
+            data.text="Kayıtlı İsminiz Bulunmuyor"
+            textView.text.clear()
+        }
     }
 }
