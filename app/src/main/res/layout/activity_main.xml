@@ -27,13 +27,15 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_marginBottom="20dp">
+
             <Button
                 android:id="@+id/save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10dp"
+                android:layout_marginRight="20dp"
+                android:onClick="Save"
                 android:text="Kaydet"
-                android:layout_marginRight="20dp"/>
+                android:textSize="10dp" />
             <Button
                 android:id="@+id/delete"
                 android:layout_width="wrap_content"
