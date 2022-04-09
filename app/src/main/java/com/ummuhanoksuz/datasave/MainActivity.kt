@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun Save(view: View){
-        var alert=AlertDialog.Builder(this)
+        var alert=AlertDialog.Builder(this@MainActivity)//This activitymizi referans vermediğinde bu şekilde kullanabiliriz.
         alert.setTitle("Uyarı")
         alert.setMessage("Kayıt etmek istediğinizden emin misiniz?")
         alert.setPositiveButton("Evet"){
@@ -64,6 +64,11 @@ class MainActivity : AppCompatActivity() {
         var intent=Intent(applicationContext,NextActivity::class.java)
         intent.putExtra("name",setName.text.toString().toUpperCase())
         intent.putExtra("surname",setSurname.text.toString().toUpperCase())
+        startActivity(intent)
+    }
+
+    fun sayacSay(view:View){
+        var intent=Intent(this,TimerActivity::class.java)
         startActivity(intent)
     }
 }

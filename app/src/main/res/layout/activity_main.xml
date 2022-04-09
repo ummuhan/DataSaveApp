@@ -76,6 +76,13 @@
                 android:layout_height="wrap_content"
                 android:onClick="nextPage"
                 android:text="Sonraki Sayfa" />
+
+            <Button
+                android:id="@+id/sayacButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sayaç Say"
+                android:onClick="sayacSay"/>
         </LinearLayout>
 
     </LinearLayout>
